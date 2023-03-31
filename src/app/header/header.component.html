@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/"><h3>E-commerce</h3></a>
+
+    <div class="navbar-collapse" [ngSwitch]="menuType">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngSwitchCase="'default'">
+        <li class="nav-item">
+          <a class="nav-link" routerLink=""> Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="seller-auth"> Seller </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="user-auth"> Login/SignUp </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"> Cart({{cartItems}}) </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngSwitchCase="'user'">
+        <li class="nav-item">
+          <a class="nav-link" routerLink=""> Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="seller-auth"> Seller </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">{{ userName | titlecase}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="cartItems>0?'cart-page':null"> Cart({{cartItems}}) </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="userLogOut()"> Logout </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngSwitchCase="'seller'">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="seller-home"> Product List </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="seller-add"> Add Product </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logOut()"> Logout </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">{{ sellerName | titlecase }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="d-flex" *ngIf="menuType !== 'seller'">
+      <input
+        #searchInput
+        (keyup)="searchProduct($event)"
+        (blur)="hideResult()"
+        class="form-control me-2"
+        style="border: 1px solid green"
+        type="search"
+        placeholder="Serach here"
+        id=""
+      />
+      <button
+        (click)="submitSearch(searchInput.value)"
+        class="btn btn-outline-success"
+        type="submit">
+        Search
+      </button>
+
+      <ul
+        class="suggested-result"
+        *ngIf="searchResult"
+        style="list-style-type: none">
+        <li *ngFor="let item of searchResult">
+          <a href="" (mousedown)="redirectTodetails(item.id)">{{
+            item.name
+          }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

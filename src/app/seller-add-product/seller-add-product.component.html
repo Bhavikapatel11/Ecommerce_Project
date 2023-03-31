@@ -1,0 +1,21 @@
+
+<div class="container">
+    <div class="addProduct">
+      <h3 class="text-center my-4">Add New Product</h3>
+      <p class="error-p">{{addProductmess}}</p>
+      <form class="text-center" #selleraddproduct="ngForm"
+        (ngSubmit)="addSubmit(selleraddproduct.value)" >
+        <!--<div class="mb-3"></div>-->
+          
+          <input type="text" ngModel class="form-control mb-3" name="name" placeholder="Enter Product Name" />        
+          <input type="text" ngModel class="form-control mb-3" name="price" placeholder="Enter Product Price" />
+          <input type="text" ngModel class="form-control mb-3" name="color" placeholder="Enter Product Color" />
+          <input type="text" ngModel class="form-control mb-3" name="category" placeholder="Enter Product Category" />
+          <textarea name="description" ngModel class="form-control mb-3" id="" cols="1" rows="3" placeholder="Enter Product Description"></textarea>
+          <input type="text" ngModel class="form-control mb-3" name="url" placeholder="Enter image url" />
+        
+        <button type="submit" class="btn btn-primary my-2">Add Product</button><br>
+        
+      </form>
+    </div>
+</div>

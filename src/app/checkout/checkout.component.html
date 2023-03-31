@@ -1,0 +1,55 @@
+<div class="checkout">
+  <p class="error-p">{{cartMsg}}</p>
+  <h2 class="text-center">Checkout</h2>
+  <div class="row">
+    <div class="col-sm-7 shipping-details">
+      <h3 class="text-center">Add Shipping Details</h3>
+
+      <form class="text-center" #checkout="ngForm" (ngSubmit)="order(checkout.value)">
+        <input
+          type="email"
+          ngModel
+          class="form-control mb-3"
+          name="email"
+          placeholder="Enter user email"
+        />
+
+        <input
+          type="text"
+          ngModel
+          class="form-control mb-3"
+          name="address"
+          placeholder="Enter your address"
+        />
+
+        <input
+          type="text"
+          ngModel
+          class="form-control mb-3"
+          name="contact"
+          placeholder="Enter contact details"
+        />
+
+        <button class="btn btn-outline-success">Order now</button>
+      </form>
+    </div>
+    <div class="col-sm-5 payment-total">
+      <h3 class="text-center">Payment</h3>
+      <h5>Total amount: <span>{{totalPrice}}</span> </h5>
+      <div class="payment text-center">
+
+        <h5><span>Payment Method:</span></h5>
+        
+        <select [(ngModel)]="selectedItem"
+        name="payment-method" class="form-control option" id="">
+          <option >Gpay</option>
+          <option >Phone Pe</option>
+          <option >UPI</option>
+          <option >Credit Card</option>
+          <option >Debit Card</option>
+        </select>
+
+      </div>
+    </div>
+  </div>
+</div>

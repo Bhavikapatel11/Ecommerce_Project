@@ -1,0 +1,84 @@
+<!--templete driven form-->
+
+<div class="container">
+  <div *ngIf="!showuserLogin" class="signup">
+    <h3 class="text-center my-4">Sign-Up</h3>
+    <form
+      class="text-center"
+      #userSignup="ngForm"
+      (ngSubmit)="signUpuser(userSignup.value)"
+    >
+      <input
+        type="text"
+        ngModel
+        class="form-control mb-3"
+        name="name"
+        placeholder="Enter Your Name"
+      />
+      <input
+        type="email"
+        ngModel
+        class="form-control mb-3"
+        name="email"
+        placeholder="Enter Email address"
+      />
+      <input
+        type="password"
+        ngModel
+        class="form-control mb-3"
+        name="password"
+        placeholder="Enter password"
+      />
+
+      <button type="submit" class="btn btn-primary my-2">Submit</button><br />
+      <a (click)="openuserLogin()" class="toggle-link"
+        >Already have account? Login.!</a
+      >
+    </form>
+  </div>
+
+  <div *ngIf="showuserLogin" class="login">
+    <h3 class="text-center my-4">Login</h3>
+
+    <form
+      class="text-center"
+      #userLogin="ngForm"
+      (ngSubmit)="loginUser(userLogin.value)">
+      <p class="error-p">{{userAuth}}</p>
+
+      <input
+        type="email"
+        ngModel
+        class="form-control mb-3"
+        name="email"
+        placeholder="Enter Email address"
+        #email="ngModel"
+        required
+        email
+      />
+      <p class="invalid-input">
+        <span *ngIf="email.invalid && email.touched">*Please enter valid email</span>
+      </p>
+
+      <input
+        type="password"
+        ngModel
+        class="form-control mb-3"
+        name="password"
+        placeholder="Enter password"
+        #password="ngModel"
+        required
+        minlength="2"
+        maxlength="20"
+      />
+      <p class="invalid-input">
+        <span *ngIf="password.invalid && password.touched">*Please enter valid password</span>
+      </p>
+
+      <button type="submit" [disabled]="userLogin.invalid" class="btn btn-primary my-2">Submit</button><br />
+      <a (click)="openuserSignup()" class="toggle-link"
+        >Don't have account? SignUp.!</a
+      >
+    </form>
+  </div>
+</div>

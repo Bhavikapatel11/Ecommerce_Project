@@ -1,0 +1,9 @@
+.form-label{
+    font-size: 18px;
+}
+.form-control{
+    width: 30%;
+    height: 45px;
+    margin: auto ;
+    border: 1px solid gray;
+}

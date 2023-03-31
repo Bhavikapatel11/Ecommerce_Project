@@ -1,0 +1,31 @@
+
+.checkout h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.shipping-details h3{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.form-control{
+    width: 50%;
+    height: 45px;
+    margin: auto ;
+    border: 1px solid gray;
+}
+
+.payment-total h3{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.payment-total h5{
+    padding: 10px;
+}
+.payment{
+    display: flex;
+}
+.option{
+    margin-left: -3px;
+}
