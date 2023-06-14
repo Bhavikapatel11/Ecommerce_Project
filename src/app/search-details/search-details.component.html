@@ -18,7 +18,7 @@
             <button *ngIf="!removeCart" class="btn btn-outline-success" (click)="addToCart()">Add to Cart</button>
             <button *ngIf="removeCart" class="btn btn-outline-success" (click)="removeToCart(productData.id)">Remove to Cart</button>
             <span class="space"></span>
-            <button class="btn btn-outline-success">Buy now</button>
+            <button class="btn btn-outline-success" (click)="buyNow()" >Buy now</button>
             
             <div class="quantity-group">
                 <button class="btn btn-outline-success" (click)="handleQuantity('min')" >-</button>

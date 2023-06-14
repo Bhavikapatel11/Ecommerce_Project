@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
         let sellerStore=localStorage.getItem('seller');
         let sellerData =sellerStore && JSON.parse(sellerStore);
         this.sellerName=sellerData.name;
-         this.menuType = 'seller';
+        this.menuType = 'seller';
        }
        else if(localStorage.getItem('user')){
          let userStore = localStorage.getItem('user');
@@ -35,6 +35,9 @@ export class HeaderComponent implements OnInit {
          this.menuType='user';
          this.Productservice.getListCart(userData.id);
        }
+       else {
+        this.menuType = 'default';
+      }
     }
     })
     

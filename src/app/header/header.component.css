@@ -9,8 +9,12 @@
     font-size: 20px;
     color: purple;
     cursor: pointer;
-}
 
+}
+.nav-link:hover{
+    background-color: rgba(214, 186, 186, 0.492);
+    border-radius: 12px;
+}
 .suggested-result{
     position: absolute;
     top: 54px;

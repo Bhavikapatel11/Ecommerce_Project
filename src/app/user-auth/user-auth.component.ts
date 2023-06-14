@@ -38,11 +38,11 @@ export class UserAuthComponent implements OnInit {
   }
 
   openuserLogin(){
-    this.showuserLogin= false;
+    this.showuserLogin= true;
   }
 
   openuserSignup(){
-    this.showuserLogin= true;
+    this.showuserLogin= false;
   }
 
   localStoragetoRemotecart(){

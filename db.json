@@ -41,6 +41,24 @@
       "email": "mish@gmail.com",
       "password": "abc123",
       "id": 8
+    },
+    {
+      "name": "ayra",
+      "email": "ayra@gmail.com",
+      "password": "98765",
+      "id": 9
+    },
+    {
+      "name": "myra",
+      "email": "myra@gmai.com",
+      "password": "12345",
+      "id": 10
+    },
+    {
+      "name": "shan",
+      "email": "shan@gmail.com",
+      "password": "012345",
+      "id": 11
     }
   ],
   "addProduct": [
@@ -121,7 +139,7 @@
       "price": "52000",
       "color": "off-white",
       "category": "mobile",
-      "description": "new one",
+      "description": "it's an iPhone....:)",
       "url": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
       "id": 9
     }
@@ -158,20 +176,7 @@
       "id": 5
     }
   ],
-  "cart": [
-    {
-      "name": "Noise Smart Watch",
-      "price": "2000",
-      "color": "Black",
-      "category": "Watch",
-      "description": "Noise smart watch for man and women both",
-      "url": "https://www.reliancedigital.in/medias/Noise-Colorfit-Pro-2-Smart-Watch-491900986-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1MDc0NXxpbWFnZS9qcGVnfGltYWdlcy9oYzkvaDdjLzk1OTE4MjA3NDY3ODIuanBnfDA3MjZlMzkzOTExYzMyNzk5Y2YzOTk0MWFkMjc5YjE5OTlkMDE4NzYzYTg1YzQ2YmNjZjMxYzc5ZDJiYjBlNDg",
-      "quantity": 1,
-      "productId": 8,
-      "userId": 5,
-      "id": 9
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "email": "arav@gmail.com",
@@ -192,13 +197,31 @@
       "id": 2
     },
     {
-      "email": "bhavi@gmail.com",
-      "address": "surat",
-      "contact": "856230",
-      "totalprice": 220100,
-      "paymentValue": "UPI",
-      "userId": 1,
+      "email": "bhavika@gmail.com",
+      "address": "navsari",
+      "contact": "125478",
+      "totalprice": 65100,
+      "paymentValue": "Credit Card",
+      "userId": 5,
       "id": 3
+    },
+    {
+      "email": "arav@gmail.com",
+      "address": "navsari",
+      "contact": "123456",
+      "totalprice": 60100,
+      "paymentValue": "Phone Pe",
+      "userId": 5,
+      "id": 4
+    },
+    {
+      "email": "",
+      "address": "",
+      "contact": "",
+      "totalprice": 5100,
+      "paymentValue": "",
+      "userId": 5,
+      "id": 5
     }
   ]
 }
